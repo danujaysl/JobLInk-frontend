@@ -1,1 +1,1 @@
-# JobLInk-frontend
+# JobLink-frontend
