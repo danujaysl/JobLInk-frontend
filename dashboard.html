@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobLink - Dashboard</title>
+    <link rel="stylesheet" href="styledash.css"> 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div id="sideNavs" class="sideNav">
+        <img src="images/joblink logo.png" alt="logo">
+        <p>&nbsp;&nbsp;</p>
+        <a href="#" class="icon-1"><i class='bx bxs-user-plus icons'></i>&nbsp;&nbsp;Make Appointment</a>
+        <a href="#" class="icon-1"><i class='bx bxs-folder-plus icons' ></i></i>&nbsp;&nbsp;My Appointments  </a>
+        <a href="#" class="icon-1"><i class='bx bxs-user icons'></i>&nbsp;&nbsp;Profile Details&nbsp;</a>
+        <a href="#" class="icon-1"><i class='bx bxs-lock-open-alt icons' ></i>&nbsp;&nbsp;Change Password</a>
+    </div>
+    <div class="main">
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size: 30px; cursor: pointer; color: white;" class="nav">&#9776; JOBLINK MENU</span>
+                <span style="font-size: 30px; cursor: pointer; color: white;" class="nav2">&#9776; MENU</span>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script>
+        $(".nav2").click(function(){
+            $("#sideNavs").css('width','70px');
+            $(".main").css('margin-left','70px');
+            $(".icons").css('visibility','visible');
+            $(".icons").css('mergin-top','400px');
+            $(".icons").css('mergin-bottom','50%');
+            $(".icons").css('font-size','30px');
+            $(".icons").css('margin-left','-8px');
+            $(".icon-1").css('visibility','hidden');
+            $(".sideNav img").css('visibility','hidden');
+            $(".nav2").css('display','none');
+            $(".nav").css('display','block');
+        });
+        $(".nav").click(function(){
+            $("#sideNavs").css('width','400px');
+            $(".main").css('margin-left','400px');
+            $(".icons").css('visibility','visible');
+            $(".icon-1").css('visibility','visible');
+            $(".sideNav img").css('visibility','visible');
+            $(".nav").css('display','none');
+            $(".nav2").css('display','block');
+        });
+    </script>
+</body>
+</html>

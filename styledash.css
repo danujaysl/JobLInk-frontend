@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+
+
+.sideNav img{
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    margin-left: 60px;
+    margin-bottom:20%;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #1b203d;
+    overflow: hidden;
+    font-family: poppins;
+    display: flex;
+    min-height: 100vh;
+    background: url('images/bgDash.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.clear-fix{
+    clear: both;
+}
+
+.sideNav{
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #272c4a;
+    overflow: hidden;
+    transition: 0.7s;
+    padding-top: 30px;
+}
+.sideNav a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #a1a1a1;
+    display: block;
+    transition: 0.3s;
+
+}
+.sideNav a:hover{
+    color: #f1f1f1;
+    background-color: #1b203d;
+}
+.main{
+    transition: margin-left .5s;
+    padding: 16px;
+    margin-left: 400px;
+}
+.head{
+    padding: 20px;
+}
+.nav{
+    display: none;
+}
