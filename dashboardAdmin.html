@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobLink - Dashboard</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="styledash.css"> 
+    <link rel="stylesheet" href="styledashAdmin.css"> 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <div id="sideNavs" class="sideNav">
         <img src="images/joblink logo.png" alt="logo">
         <p>&nbsp;&nbsp;</p>
-        <a href="#" class="icon-1"><i class='bx bxs-user-plus icons'></i>&nbsp;&nbsp;Make Appointment</a>
-        <a href="#" class="icon-2"><i class='bx bxs-folder-plus icons' ></i></i>&nbsp;&nbsp;My Appointment</a>
-        <a href="#" class="icon-3"><i class='bx bxs-user icons'></i>&nbsp;&nbsp;Profile Details&nbsp;</a>
-        <a href="#" class="icon-4"><i class='bx bxs-lock-open-alt icons' ></i>&nbsp;&nbsp;Change Password</a>
+        <a href="#" class="icon-1"><i class='bx bxs-user-plus icons'></i>&nbsp;&nbsp;Add Consultant</a> 
+        <a href="#" class="icon-2"><i class='bx bxs-folder-plus icons' ></i></i>&nbsp;&nbsp;Reports</a>
+        <!-- <a href="#" class="icon-3"><i class='bx bxs-user icons'></i>&nbsp;&nbsp;Consultant Details&nbsp;</a>
+        <a href="#" class="icon-4"><i class='bx bxs-lock-open-alt icons' ></i>&nbsp;&nbsp;Change Password</a> -->
     </div>
     <div class="main">
         <div class="head">
@@ -26,92 +26,68 @@
             <div class="clearfix"></div>
         </div>
     </div>
-    <div class="wrapper-1"> 
+    <!-- <div class="wrapper-1"> 
         <form action=""> 
-            <h1>Make an Appointment</h1> 
-            <div class="input-box1">
-                <input type="date" class="text-box" placeholder="Choose date" required>
-            </div>
-            <div class="combo-box">
-                <select id="styledCombo">
-                    <option value="" disabled selected required>Country</option>
-                    <option value="1">Australia</option>
-                    <option value="2">New Zealand</option>
-                    <option value="3">United States</option>
-                    <option value="4">United Kingdom</option>
-                </select>
-            </div>
-            <div class="combo-box2">
-                <select id="styledCombo2" required>
-                    <option value="" disabled selected>Job type</option>
-                    <option value="1">Waiter</option>
-                    <option value="2">Cleaner</option>
-                    <option value="3">Driver</option>
-                    <option value="4">Chef</option>
-                </select>
-            </div>
-            <div class="combo-box3">
-                <select id="styledCombo3" required>
-                    <option value="" disabled selected>Select Available Agent</option>
-                    <option value="1">John</option>
-                    <option value="2">Marlon</option>
-                    <option value="3">Dillon</option>
-                    <option value="4">Yohan</option>
-                </select>
-            </div> 
+            <h1>Pending Appointments</h1> 
             <button type="submit" class="btnSubmit">Place appointment</button>
         </form> 
-    </div> 
-    <div class="wrapper-2"> 
+    </div>   -->
+    <!-- <div class="wrapper-2"> 
         <form action=""> 
-            <h1>My Profile</h1>
+            <h1>Consultant Profile</h1>
             <div class="input-box2">
                 <label class="label">User name</label> 
                 <input type="text" class="text-box" readonly>
             </div>
             <div class="input-box2">
                 <label class="label">Your name</label> 
-                <input type="text" class="text-box" id="123" readonly>
-            </div>
-            <div class="input-box2">
-                <label class="label">Age</label> 
-                <input type="text" class="text-box" readonly>
+                <input type="text" class="text-box" id="123" required>
             </div>
             <div class="input-box2">
                 <label class="label">Telephone</label> 
+                <input type="text" class="text-box" required>
+            </div>
+            <div class="input-box2">
+                <label class="label">Consulting Country</label> 
+                <input type="text" class="text-box" readonly>
+            </div>
+            <div class="input-box2">
+                <label class="label">Consulting Job type</label> 
                 <input type="text" class="text-box" readonly>
             </div>
             <button type="submit" class="btnUpdate">Update</button>
         </form> 
-    </div> 
+    </div>  -->
     <div class="wrapper-3"> 
         <form action=""> 
-            <h1>My Appointment</h1>
+            <h1>Add Consultant</h1>
             <div class="input-box2">
-                <label class="label">Appointment Number</label> 
-                <input type="text" class="text-box" readonly>
-            </div><div class="input-box2">
-                <label class="label">Agent Name</label> 
+                <label class="label">User name</label> 
                 <input type="text" class="text-box" readonly>
             </div>
             <div class="input-box2">
-                <label class="label">Country</label> 
-                <input type="text" class="text-box" id="123" readonly>
+                <label class="label">Telephone</label> 
+                <input type="text" class="text-box" id="123" required>
             </div>
             <div class="input-box2">
-                <label class="label">Job Type</label> 
-                <input type="text" class="text-box" readonly>
+                <label class="label">Consultant name</label> 
+                <input type="text" class="text-box" required>
             </div>
             <div class="input-box2">
-                <label class="label">Date</label> 
-                <input type="text" class="text-box" readonly>
+                <label class="label">Consulting Country</label> 
+                <input type="text" class="text-box" required>
             </div>
-            <button type="submit" class="btnUpdate">Cancel Appointment</button>
+            <div class="input-box2">
+                <label class="label">Consulting Job type</label> 
+                <input type="text" class="text-box" required>
+            </div>
+            <button type="submit" class="btnUpdate">Add</button>
+            <button type="submit" class="btnRemove">Remove</button>
         </form> 
     </div> 
     <div class="wrapper-4"> 
         <form action=""> 
-            <h1>Change Password</h1>
+            <h1>Reports</h1>
             <div class="input-box2">
                 <label class="label">Current Password</label> 
                 <input type="text" class="text-box" readonly>
@@ -167,15 +143,15 @@
 
             $(".icon-1").click(function(){
              $(".wrapper-2").hide();
-             $(".wrapper-3").hide();
+             $(".wrapper-1").hide();
              $(".wrapper-4").hide();
-             $(".wrapper-1").toggle();
+             $(".wrapper-3").toggle();
             });
             $(".icon-2").click(function(){
              $(".wrapper-1").hide();
              $(".wrapper-2").hide();
-             $(".wrapper-4").hide();
-             $(".wrapper-3").toggle();
+             $(".wrapper-3").hide();
+             $(".wrapper-4").toggle();
             });
             $(".icon-3").click(function(){
              $(".wrapper-1").hide();
