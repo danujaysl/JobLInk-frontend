@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family-Poppins:wght@300;400;500;600;700;800;900&display=swap");
+/* Your CSS styles here */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* More CSS styles here */
 
 * {
     margin: 0;
@@ -74,22 +79,22 @@ body{
     font-size: 20px;
 }
 
-.wrapper .remember-forgot  {
+/* .wrapper .remember-forgot  {
     display: flex;
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
-}
+} */
 
-.remember-forgot label input{
+/* .remember-forgot label input{
     accent-color: white;
     margin-right: 3px;
-}
+} */
 
-.remember-forgot a {
+/* .remember-forgot a {
     color: white;
     text-decoration: underline;
-}
+} */
 
 .wrapper .btnSubmit {
     width: 100%;
@@ -144,4 +149,52 @@ body{
 .register-link p a:hover{
     text-decoration: underline;
 
+}
+
+/* Login COMBO BOX */
+.wrapper-1 .combo-box {
+    position: relative;
+    margin-top: 20%;
+    width: 100%;
+    height: 20px;
+    background: transparent;
+}
+
+.combo-box select {
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #03cdff;
+    border-radius: 5px;
+    font-family: poppins;
+    font-size: 20px;
+    background-color: #0b434b;
+    color: #ffffff;
+    appearance: none; /* Remove default styles (such as the dropdown arrow) */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* background: transparent; */
+    border-radius: 40px;
+}
+
+.combo-box::before {
+    /* content: '\25BC'; */
+    position: absolute;
+    top: 150%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #2aa2e7;
+    
+}
+
+.combo-box select option {
+    background-color: #fff;
+    color: #0d4d81;
+}
+
+.combo-box select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }

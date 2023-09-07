@@ -8,34 +8,46 @@
             <title>JobLink - Login</title> 
             <link rel="stylesheet" href="style.css"> 
             <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-</head> 
+            <script src="./js/script.js"></script>
+            <script src="./js/code.jquery.com_jquery-3.7.1.min.js"></script>
+        </head> 
 
 <body>
 
     <div class="wrapper"> 
-        <form action=""> 
+        <!-- <form action="">  -->
             <img src="images/joblink logo.png" alt="logo">
-            <h1>Login</h1> 
+            <h1>Login</h1>
+            <div class="combo-box">
+                <p>&nbsp;</p>
+                <select id="styledCombo" >
+                    <option value="" disabled selected>Choose Login type</option>
+                    <option value="1">Job Seeker</option>
+                    <option value="2">Consultant</option>
+                    <option value="3">Admin</option>
+                </select>
+            </div> 
             <div class="input-box"> 
-                <input type="text" placeholder="Username" required>
+                <input id="txtusername" type="text" placeholder="Username" required>
                 <i class='bx bxs-user'></i>
             </div> 
             <div class="input-box"> 
-                <input type= "password" placeholder="Password" required>
+                <input id="txtpassword" type= "password" placeholder="Password" required>
                 <i class='bx bxs-lock-alt' ></i>
             </div> 
-            <div class="remember-forgot">
+            <!-- <div class="remember-forgot">
                 <label><input type="checkbox">Remember me</label>
                 <a href="#">Forgot Password?</a>
-            </div>
+            </div> -->
             
-            <button type="submit" class="btnSubmit">Login</button>
+            <button type="submit" class="btnSubmit" id="btnlogin" onclick="fncLogin()">Login</button>
 
             <div class="register-link">
                 <p>Don't Have an account?
                 <a href="register.html">Register</a></p>
             </div>
-        </form> 
+        <!-- </form>  -->
     </div> 
 </body>
+<script src="./login.js"></script>
 </html>
