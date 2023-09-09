@@ -36,7 +36,7 @@
                 <input type="date" class="text-box" placeholder="Choose date" required>
             </div>
             <div class="combo-box">
-                <select id="styledCombo">
+                <select id="refcountry" onchange="loadConsultants()">
                     <option value="" disabled selected required>Country</option>
                     <option value="1">Australia</option>
                     <option value="2">New Zealand</option>
@@ -45,21 +45,24 @@
                 </select>
             </div>
             <div class="combo-box2">
-                <select id="styledCombo2" required>
+                <select id="refjobtype" required onchange="loadConsultants()">
                     <option value="" disabled selected>Job type</option>
                     <option value="1">Waiter</option>
                     <option value="2">Cleaner</option>
                     <option value="3">Driver</option>
                     <option value="4">Chef</option>
                 </select>
+                <p>&nbsp;Select Available Consultant for your Job Below &nbsp;&nbsp;</p>
             </div>
+            <p>&nbsp</p>
             <div class="combo-box3">
-                <select id="styledCombo3" required>
-                    <option value="" disabled selected>Select Available Agent</option>
+                
+                <select id="refconsultant" required>
+                    <!-- <option value="" disabled selected>Select Available Agent</option>
                     <option value="1">John</option>
                     <option value="2">Marlon</option>
                     <option value="3">Dillon</option>
-                    <option value="4">Yohan</option>
+                    <option value="4">Yohan</option> -->
                 </select>
             </div> 
             <button type="submit" class="btnSubmit">Place appointment</button>
