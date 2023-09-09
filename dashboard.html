@@ -20,7 +20,7 @@
         <a href="#" class="icon-4"><i class='bx bxs-lock-open-alt icons' ></i>&nbsp;&nbsp;Change Password</a>
         <a href="#" class="icon-4" id="btnlogout" onclick="fncLogout()"><i class='bx bx-log-out-circle' ></i>&nbsp;&nbsp;Logout</a>
     </div>
-    <div class="main">
+    <div class="main">  
         <div class="head">
             <div class="col-div-6">
                 <span style="font-size: 30px; cursor: pointer; color: white;" class="nav">&#9776; JOBLINK MENU</span>
@@ -28,13 +28,18 @@
             </div>
             <div class="clearfix"></div>
         </div>
-    </div>
+    </div> 
     <div class="wrapper-1"> 
-        <form action=""> 
+        <form action="">  
             <h1>Make an Appointment</h1> 
             <div class="input-box1">
-                <input type="date" class="text-box" placeholder="Choose date" required>
+                <input type="date" class="text-box" placeholder="Choose date" required id="appointment-date">
             </div>
+
+            <div class="input-box11" >
+                <input type="time" class="text-box" placeholder="Choose date" required id="appointment-time">
+            </div>
+
             <div class="combo-box">
                 <select id="refcountry" onchange="loadConsultants()">
                     <option value="" disabled selected required>Country</option>
@@ -65,7 +70,7 @@
                     <option value="4">Yohan</option> -->
                 </select>
             </div> 
-            <button type="submit" class="btnSubmit">Place appointment</button>
+            <button type="submit" class="btnSubmit" onclick="placeAppointment()">Place appointment</button>
         </form> 
     </div> 
     <div class="wrapper-2"> 
