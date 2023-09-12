@@ -558,3 +558,42 @@ body{
     background-color: rgb(31, 151, 47);
     color: white;
 }
+
+/* Table CSS */
+
+.wrapper-3 table,
+tr,
+th {
+  padding: 1rem;
+  text-align: center;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    border-radius: .2rem;
+}
+.Table01{
+    width: 95%;
+    max-height: 89%;
+    background-color: #212121;
+    margin: .8rem auto;
+    border-radius: .6rem;
+    overflow: auto;
+}
+.Table01::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #fff;
+    visibility: hidden;
+}
+.Table01::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+tbody tr:nth-child(even){
+    background-color: #171717;
+} 
+tbody tr:hover{
+    background-color: #000;
+}
