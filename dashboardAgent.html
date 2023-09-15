@@ -14,8 +14,8 @@
     <div id="sideNavs" class="sideNav">
         <img src="images/joblink logo.png" alt="logo">
         <p>&nbsp;&nbsp;</p>
-        <a href="#" class="icon-1"><i class='bx bxs-user-plus icons'></i>&nbsp;&nbsp;Pending Appointments</a> 
-        <a href="#" class="icon-2"><i class='bx bxs-folder-plus icons' ></i></i>&nbsp;&nbsp;My Appointments</a>
+        <a href="#" class="icon-1" onclick="fncGetPendingAppointment()"><i class='bx bxs-user-plus icons'></i>&nbsp;&nbsp;Pending Appointments</a> 
+        <a href="#" class="icon-2" onclick="fncGetAppointment()"><i class='bx bxs-folder-plus icons' ></i></i>&nbsp;&nbsp;My Appointments</a>
         <a href="#" class="icon-3"><i class='bx bxs-user icons'></i>&nbsp;&nbsp;Consultant Details&nbsp;</a>
         <a href="#" class="icon-4"><i class='bx bxs-lock-open-alt icons' ></i>&nbsp;&nbsp;Change Password</a>
         <a href="#" class="icon-4" id="btnlogout" onclick="fncLogout()"><i class='bx bx-log-out-circle' ></i>&nbsp;&nbsp;Logout</a>
@@ -44,57 +44,8 @@
                             <th> Status </th>
                         </tr>
                     </thead>
-                        <tbody>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p><button class="btnapr">Approve</button><button class="btnrej">Reject</button></p> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p><button class="btnapr">Approve</button><button class="btnrej">Reject</button></p> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p><button class="btnapr">Approve</button><button class="btnrej">Reject</button></p> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p><button class="btnapr">Approve</button><button class="btnrej">Reject</button></p> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p><button class="btnapr">Approve</button><button class="btnrej">Reject</button></p> 
-                                </td>
-                            </tr>
+                        <tbody id="tbody_pending_app">
+                         
                         </tbody>
                 </table>
 
@@ -143,57 +94,8 @@
                             <th> Status </th>
                         </tr>
                     </thead>
-                        <tbody>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p>Approved</p> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p>Approved</p> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p>Approved</p> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p>Approved</p> 
-                                </td>
-                            </tr>
-                            <tr>
-                                <td> 10 </td>
-                                <td> Anupa </td>
-                                <td> Australia </td>
-                                <td> Cleaner </td>
-                                <td> 2023-09-22 15:00:00 </td>
-                                <td> 
-                                    <p><strong>Approved</strong></p> 
-                                </td>
-                            </tr>
+                        <tbody id="myapp_tbody">
+                           
                         </tbody>
                 </table>
 

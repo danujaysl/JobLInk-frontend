@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JobLink - Dashboard</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="./js/scriptdash.js"></script>
+    <!-- <script src="./js/scriptdash.js"></script> -->
     <script src="./js/code.jquery.com_jquery-3.7.1.min.js"></script>
-    <link rel="stylesheet" href="styledash.css"> 
+    <link rel="stylesheet" href="styledash.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     <div id="sideNavs" class="sideNav">
         <img src="images/joblink logo.png" alt="logo">
         <p>&nbsp;&nbsp;</p>
         <a href="#" class="icon-1"><i class='bx bxs-user-plus icons'></i>&nbsp;&nbsp;Make Appointment</a>
-        <a href="#" class="icon-2"><i class='bx bxs-folder-plus icons' ></i></i>&nbsp;&nbsp;My Appointment</a>
-        <a href="#" class="icon-3"><i class='bx bxs-user icons'></i>&nbsp;&nbsp;Profile Details&nbsp;</a>
-        <a href="#" class="icon-4"><i class='bx bxs-lock-open-alt icons' ></i>&nbsp;&nbsp;Change Password</a>
-        <a href="#" class="icon-4" id="btnlogout" onclick="fncLogout()"><i class='bx bx-log-out-circle' ></i>&nbsp;&nbsp;Logout</a>
+        <a href="#" class="icon-2" onclick="fncMyAppointment()"><i class='bx bxs-folder-plus icons'></i></i>&nbsp;&nbsp;My Appointment</a>
+        <a href="#" class="icon-3" onclick="fncMyDetails()"><i class='bx bxs-user icons'></i>&nbsp;&nbsp;Profile Details&nbsp;</a>
+        <a href="#" class="icon-4" onclick="fncChangePassword()"><i class='bx bxs-lock-open-alt icons'></i>&nbsp;&nbsp;Change Password</a>
+        <a href="#" class="icon-4" onclick="fncLogout()"><i class='bx bx-log-out-circle'></i>&nbsp;&nbsp;Logout</a>
     </div>
-    <div class="main">  
+    <div class="main">
         <div class="head">
             <div class="col-div-6">
                 <span style="font-size: 30px; cursor: pointer; color: white;" class="nav">&#9776; JOBLINK MENU</span>
@@ -28,15 +30,15 @@
             </div>
             <div class="clearfix"></div>
         </div>
-    </div> 
-    <div class="wrapper-1"> 
-        <form action="">  
-            <h1>Make an Appointment</h1> 
+    </div>
+    <div class="wrapper-1">
+        <form action="">
+            <h1>Make an Appointment</h1>
             <div class="input-box1">
                 <input type="date" class="text-box" placeholder="Choose date" required id="appointment-date">
             </div>
 
-            <div class="input-box11" >
+            <div class="input-box11">
                 <input type="time" class="text-box" placeholder="Choose date" required id="appointment-time">
             </div>
 
@@ -61,7 +63,7 @@
             </div>
             <p>&nbsp</p>
             <div class="combo-box3">
-                
+
                 <select id="refconsultant" required>
                     <!-- <option value="" disabled selected>Select Available Agent</option>
                     <option value="1">John</option>
@@ -69,138 +71,147 @@
                     <option value="3">Dillon</option>
                     <option value="4">Yohan</option> -->
                 </select>
-            </div> 
+            </div>
             <button type="submit" class="btnSubmit" onclick="placeAppointment()">Place appointment</button>
-        </form> 
-    </div> 
-    <div class="wrapper-2"> 
-        <form action=""> 
+        </form>
+    </div>
+    <div class="wrapper-2">
+        <form action="">
             <h1>My Profile</h1>
             <div class="input-box2">
-                <label class="label">User name</label> 
-                <input type="text" class="text-box" readonly>
+                <label class="label" >User name</label>
+                <input type="text" id="txtusername" class="text-box" readonly>
             </div>
             <div class="input-box2">
-                <label class="label">Your name</label> 
-                <input type="text" class="text-box" id="123" readonly>
+                <label class="label">Your name</label>
+                <input type="text" id="txtname" class="text-box" id="123" readonly>
             </div>
             <div class="input-box2">
-                <label class="label">Age</label> 
-                <input type="text" class="text-box" readonly>
+                <label class="label">Age</label>
+                <input type="text" id="txtage" class="text-box" readonly>
             </div>
             <div class="input-box2">
-                <label class="label">Telephone</label> 
-                <input type="text" class="text-box" readonly>
+                <label class="label">Telephone</label>
+                <input type="text" id="txttelephone" class="text-box" readonly>
             </div>
             <button type="submit" class="btnUpdate">Update</button>
-        </form> 
-    </div> 
-    <div class="wrapper-3"> 
-        <form action=""> 
-            <h1>My Appointment</h1>
-            <div class="input-box2">
-                <label class="label">Appointment Number</label> 
-                <input type="text" class="text-box" readonly>
-            </div><div class="input-box2">
-                <label class="label">Agent Name</label> 
-                <input type="text" class="text-box" readonly>
-            </div>
-            <div class="input-box2">
-                <label class="label">Country</label> 
-                <input type="text" class="text-box" id="123" readonly>
-            </div>
-            <div class="input-box2">
-                <label class="label">Job Type</label> 
-                <input type="text" class="text-box" readonly>
-            </div>
-            <div class="input-box2">
-                <label class="label">Date</label> 
-                <input type="text" class="text-box" readonly>
-            </div>
-            <button type="submit" class="btnUpdate">Cancel Appointment</button>
-        </form> 
-    </div> 
-    <div class="wrapper-4"> 
-        <form action=""> 
+        </form>
+    </div>
+    <div class="wrapper-3">
+        <!-- <form action="">  -->
+        <h1>My Appointment</h1>
+        <div class="input-box2">
+            <label class="label"> Appointment Number </label>
+            <input type="text" class="text-box" id="txtappointno">
+        </div>
+        <div class="input-box2">
+            <label class="label"> Agent Name </label>
+            <input type="text" class="text-box" id="txtagentname">
+        </div>
+        <div class="input-box2">
+            <label class="label"> Country </label>
+            <input type="text" class="text-box" id="txtcountry">
+        </div>
+        <div class="input-box2">
+            <label class="label"> Job Type </label>
+            <input type="text" class="text-box" id="txtjobtype">
+        </div>
+        <div class="input-box2">
+            <label class="label"> Status </label>
+            <input type="text" class="text-box" id="txtstatus">
+        </div>
+        <div class="input-box2">
+            <label class="label">Date </label>
+            <input type="text" class="text-box" id="txtdate">
+        </div>
+        <button type="submit" class="btnUpdate" id="btnUpdate">Cancel Appointment</button>
+        </form>
+    </div>
+    <div class="wrapper-4">
+        <form action="">
             <h1>Change Password</h1>
             <div class="input-box2">
-                <label class="label">Current Password</label> 
+                <label class="label">Current Password</label>
                 <input type="text" class="text-box" readonly>
             </div>
             <div class="input-box2">
-                <label class="label">Enter New Password</label> 
+                <label class="label">Enter New Password</label>
                 <input type="text" class="text-box" id="123" readonly>
             </div>
             <div class="input-box2">
-                <label class="label">Retype your new Password</label> 
+                <label class="label">Retype your new Password</label>
                 <input type="text" class="text-box" readonly>
             </div>
             <button type="submit" class="btnUpdate">Update</button>
-        </form> 
-    </div> 
+            <!-- </form>  -->
+    </div>
     <script>
-        $(".nav2").click(function(){
-            $("#sideNavs").css('width','70px');
-            $(".main").css('margin-left','70px');
-            $(".icons").css('visibility','visible');
-            $(".icons").css('mergin-top','400px');
-            $(".icons").css('mergin-bottom','50%');
-            $(".icons").css('font-size','30px');
-            $(".icons").css('margin-left','-8px');
-            $(".icon-1").css('visibility','hidden');
-            $(".icon-2").css('visibility','hidden');
-            $(".icon-3").css('visibility','hidden');
-            $(".icon-4").css('visibility','hidden');
-            $(".sideNav img").css('visibility','hidden');
-            $(".nav2").css('display','none');
-            $(".nav").css('display','block');
-            
+        $(".nav2").click(function () {
+            $("#sideNavs").css('width', '70px');
+            $(".main").css('margin-left', '70px');
+            $(".icons").css('visibility', 'visible');
+            $(".icons").css('mergin-top', '400px');
+            $(".icons").css('mergin-bottom', '50%');
+            $(".icons").css('font-size', '30px');
+            $(".icons").css('margin-left', '-8px');
+            $(".icon-1").css('visibility', 'hidden');
+            $(".icon-2").css('visibility', 'hidden');
+            $(".icon-3").css('visibility', 'hidden');
+            $(".icon-4").css('visibility', 'hidden');
+            $(".sideNav img").css('visibility', 'hidden');
+            $(".nav2").css('display', 'none');
+            $(".nav").css('display', 'block');
+
         });
-        
-        $(".nav").click(function(){
-            $("#sideNavs").css('width','400px');
-            $(".main").css('margin-left','400px');
-            $(".icons").css('visibility','visible');
-            $(".icon-1").css('visibility','visible');
-            $(".icon-2").css('visibility','visible');
-            $(".icon-3").css('visibility','visible');
-            $(".icon-4").css('visibility','visible');
-            $(".sideNav img").css('visibility','visible');
-            $(".nav").css('display','none');
-            $(".nav2").css('display','block');
+
+        $(".nav").click(function () {
+            $("#sideNavs").css('width', '400px');
+            $(".main").css('margin-left', '400px');
+            $(".icons").css('visibility', 'visible');
+            $(".icon-1").css('visibility', 'visible');
+            $(".icon-2").css('visibility', 'visible');
+            $(".icon-3").css('visibility', 'visible');
+            $(".icon-4").css('visibility', 'visible');
+            $(".sideNav img").css('visibility', 'visible');
+            $(".nav").css('display', 'none');
+            $(".nav2").css('display', 'block');
         });
-        
+
         $(document).ready(function () {
             $(".wrapper-1").hide();
             $(".wrapper-2").hide();
             $(".wrapper-3").hide();
             $(".wrapper-4").hide();
 
-            $(".icon-1").click(function(){
-             $(".wrapper-2").hide();
-             $(".wrapper-3").hide();
-             $(".wrapper-4").hide();
-             $(".wrapper-1").toggle();
+            $(".icon-1").click(function () {
+                $(".wrapper-2").hide();
+                $(".wrapper-3").hide();
+                $(".wrapper-4").hide();
+                $(".wrapper-1").toggle();
             });
-            $(".icon-2").click(function(){
-             $(".wrapper-1").hide();
-             $(".wrapper-2").hide();
-             $(".wrapper-4").hide();
-             $(".wrapper-3").toggle();
+            $(".icon-2").click(function () {
+                $(".wrapper-1").hide();
+                $(".wrapper-2").hide();
+                $(".wrapper-4").hide();
+                $(".wrapper-3").toggle();
             });
-            $(".icon-3").click(function(){
-             $(".wrapper-1").hide();
-             $(".wrapper-3").hide();
-             $(".wrapper-4").hide();
-             $(".wrapper-2").toggle();
+            $(".icon-3").click(function () {
+                $(".wrapper-1").hide();
+                $(".wrapper-3").hide();
+                $(".wrapper-4").hide();
+                $(".wrapper-2").toggle();
             });
-            $(".icon-4").click(function(){
-             $(".wrapper-1").hide();
-             $(".wrapper-2").hide();
-             $(".wrapper-3").hide();
-             $(".wrapper-4").toggle();
+            $(".icon-4").click(function () {
+                $(".wrapper-1").hide();
+                $(".wrapper-2").hide();
+                $(".wrapper-3").hide();
+                $(".wrapper-4").toggle();
             });
         });
+
+        
     </script>
+    <script src="./js/scriptdash.js"></script>
 </body>
+
 </html>

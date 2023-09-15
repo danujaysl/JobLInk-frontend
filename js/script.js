@@ -84,7 +84,9 @@ function fncLogin() {
         } else if (response.message == "101") {
           alert("Password is incorrect!");
         } else if (response.message == "200") {
-          // localStorage.setItem('userId', userObj.n_jobseekerid); //set as consultant id
+          const userObj = response.content
+          console.log(userObj);
+          localStorage.setItem('userId', userObj.n_consultantid); //set as consultant id
           location.href = "./dashboardAgent.html";
         } else {
           alert("Login error! Please contact Administrator!");
